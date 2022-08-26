@@ -1,1 +1,164 @@
-/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+:root {
+  --body-background: #f6f6f6;
+  --text-color: #000;
+  --white: #fff;
+  --product-text: #2f2f2f;
+  --add-button: #42940f;
+  --disabled-button: #4e4e4e;
+  --active-button: #1f5200;
+  --product-info-novelty: #fdcff3;
+  --product-info-last: #ffcf56;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h3,
+p {
+  font-size: inherit;
+}
+
+body {
+  background: var(--body-background);
+  font-family: "Arial";
+  font-style: normal;
+}
+
+main {
+  margin: 40px auto;
+}
+
+.main__title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
+  margin: 0 auto;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px 60px;
+}
+
+.product-container__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 380px;
+  width: 100%;
+  background: var(--white);
+  border-radius: 12px;
+  color: var(--product-text);
+  box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+}
+
+.product__image {
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  width: 100%;
+}
+
+.product-list {
+  padding: 24px;
+  height: 100%;
+}
+
+.product-list__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.product-list__description {
+  padding-top: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.product-btn {
+  margin: 0 24px 24px;
+}
+
+.product-btn__input {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 15px 0;
+  border: 2px solid var(--add-button);
+  border-radius: 8px;
+  color: var(--add-button);
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.product-btn__input:disabled {
+  background: var(--disabled-button);
+  border: 1px solid var(--disabled-button);
+  color: var(--white);
+  cursor: default;
+}
+
+.product-btn__input:hover {
+  background: var(--add-button);
+  border: 2px solid var(--add-button);
+  color: var(--white);
+}
+
+.product-btn__input:active {
+  background: var(--active-button);
+  border: 2px solid var(--active-button);
+  color: var(--white);
+}
+
+.product-info {
+  position: absolute;
+  z-index: 10;
+  margin: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.product-info__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  height: 24px;
+  padding: 0 16px;
+}
+
+.product-info__item_novelty {
+  background: var(--product-info-novelty);
+  text-transform: uppercase;
+}
+
+.product-info__item_last {
+  background: var(--product-info-last);
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 320px) {
+  .main__title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
