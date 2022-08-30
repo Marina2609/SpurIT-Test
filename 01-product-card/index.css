@@ -23,13 +23,13 @@ p {
   font-size: inherit;
 }
 
-body {
+.body {
   background: var(--body-background);
   font-family: "Arial";
   font-style: normal;
 }
 
-main {
+.main {
   margin: 40px auto;
 }
 
